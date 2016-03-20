@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Uploading Files</title>
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<h1 class="title">Upload Files</h1>
+	<hr />
+	
+	<div>
+		<h3>Instrucciones</h3>
+		<p class="text-justify"><b>P</b>ara este proyecto haremos la prueba de enviar un archivo
+		al servidor, luego guardarlo y por ultimo tambien ofrecer la opcion 
+		de descargarlo, para hacerlo debemos fijar la carpeta donde se guardaran 
+		los archivos, fijese en el codigo del servlet, el nombre del archivo
+		que se usara para descargar tambien esta fijado en el codigo, esto 
+		solo para fines de hacer pruebas, recuerde que para el proyecto
+		esto debe ser dinamico.
+		</p>
+	</div>
+	<hr />
+	<div>
+		Subir un archivo: <input type="file" id="file"/> <button onclick="upload()">Subir Archivo</button>
+		<h3 id="uploadStatus"></h3>
+	</div>
+	<hr />
+	<div>
+		<button onclick="download()">Descargar un archivo</button>		
+	</div>
+	
+	<script src="js/app.js"></script>
+</body>
+</html>

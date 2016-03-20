@@ -1,0 +1,12 @@
+.title {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+button {
+	border: 0;
+	padding: 15px;
+}
