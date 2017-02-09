@@ -3,10 +3,11 @@ function $ (id) {
 }
 
 var xhr = new XMLHttpRequest();
-
+var myFile = "";
 function upload () {
 	var formData = new FormData();
-	formData.append("file", $("file").files[0]);	
+	formData.append("file", $("file").files[0]);
+	myFile = $("file").files[0].name;
 	
 	xhr.onreadystatechange = function () {
 		if (xhr.status === 200 && xhr.readyState === 4) {
@@ -20,6 +21,7 @@ function upload () {
 }
 
 function download () {
-	var url = "./get-file";
+	var url = "./get-file?name="+ myFile;
+	$("myImg").src = url;
 	var downloadWindow = window.open(url);
 }

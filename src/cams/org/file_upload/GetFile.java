@@ -37,12 +37,13 @@ public class GetFile extends HttpServlet {
         response.setContentType("file");
 
         // Make sure to show the download dialog
-        response.setHeader("Content-disposition","attachment; filename=test_file.txt");
+        response.setHeader("Content-disposition","attachment; filename=slack.jpg");
 
         // Assume file name is retrieved from database
         // For example D:\\file\\test.pdf
-
-        File my_file = new File("C:\\test\\test_file.txt");
+        String name = request.getParameter("name");
+        System.out.println(name);
+        File my_file = new File("C:\\test\\"+name);
 
         // This should send the file to browser
         OutputStream out = response.getOutputStream();

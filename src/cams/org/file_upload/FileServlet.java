@@ -46,9 +46,8 @@ public class FileServlet extends HttpServlet {
 		InputStream filecontent = file.getInputStream();
 		OutputStream os = null;
 		try {
-			String eclipseDir = System.getProperty("user.dir");
-			System.out.println(eclipseDir);
-            os = new FileOutputStream(eclipseDir + "/" + this.getFileName(file));
+			String baseDir = "c:/test";			
+            os = new FileOutputStream(baseDir + "/" + this.getFileName(file));
             int read = 0;
             byte[] bytes = new byte[1024];
 
